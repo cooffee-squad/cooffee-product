@@ -14,6 +14,9 @@ class Roastery {
     var roasteryId: UUID = UUID.randomUUID()
 
     @Column
+    var name: String = ""
+
+    @Column
     var location: String = ""
 
     @Column
