@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.24.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1" author="Liquibase">
+        <createTable tableName="coffee_bean">
+            <column name="id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="coffee_bean_pkey"/>
+            </column>
+            <column name="is_acidity" type="BOOLEAN"/>
+            <column name="is_decaffeine" type="BOOLEAN"/>
+            <column name="is_single_origin" type="BOOLEAN"/>
+            <column name="price" type="FLOAT4"/>
+            <column name="roasting_type" type="SMALLINT"/>
+            <column name="trade_type" type="SMALLINT"/>
+            <column name="roastery_id" type="UUID"/>
+            <column name="description" type="TEXT"/>
+            <column name="blend_list" type="JSONB"/>
+            <column name="flavornotes" type="JSONB"/>
+            <column name="matched_coffee_tool_type" type="JSONB"/>
+            <column name="matched_reciept" type="JSONB"/>
+            <column name="processing_type" type="JSONB"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="2" author="Liquibase">
+        <createTable tableName="roastery">
+            <column name="roastery_id" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="roastery_pkey"/>
+            </column>
+            <column name="name" type="TEXT"/>
+            <column name="description" type="TEXT"/>
+            <column name="instagram_id" type="TEXT"/>
+            <column name="location" type="TEXT"/>
+            <column name="career_list" type="JSONB"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
