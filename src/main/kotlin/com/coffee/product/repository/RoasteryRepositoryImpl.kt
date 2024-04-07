@@ -6,11 +6,9 @@ import java.util.UUID
 
 @Repository
 class RoasteryRepositoryImpl(
-    private val roasteryJpaRepository: RoasteryJpaRepository
+    private val roasteryJpaRepository: RoasteryJpaRepository,
 ) : RoasteryRepository {
-
     override fun register(roastery: Roastery): UUID {
         return roasteryJpaRepository.save(roastery).roasteryId
     }
-
 }

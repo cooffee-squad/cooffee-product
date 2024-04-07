@@ -7,13 +7,13 @@ data class RegisterRoasteryRequest(
     val location: String,
     val instagramId: String,
     val description: String,
-)
-fun RegisterRoasteryRequest.toEntity(): Roastery {
-    val roastery = Roastery()
-    roastery.name = this.name
-    roastery.location = this.location
-    roastery.instagramId = this.instagramId
-    roastery.description = this.description
-    return roastery
+) {
+    fun toEntity(request: RegisterRoasteryRequest): Roastery {
+        return Roastery().apply {
+            name = request.name
+            location = request.location
+            instagramId = request.instagramId
+            description = request.description
+        }
+    }
 }
-

@@ -5,5 +5,5 @@ enum class RoastingPoint {
     LIGHT_MEDIUM,
     MEDIUM,
     MEDIUM_DARK,
-    DARK
+    DARK,
 }

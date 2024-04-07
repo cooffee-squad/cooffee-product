@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/v1/product/roastery")
 class RoasteryController(
-    private val roasteryService: RoasteryService
+    private val roasteryService: RoasteryService,
 ) {
-
     @PostMapping("/register")
-    fun registerRoastery(@RequestBody registerRoasteryRequest: RegisterRoasteryRequest) {
+    fun registerRoastery(
+        @RequestBody registerRoasteryRequest: RegisterRoasteryRequest,
+    ) {
         roasteryService.registerRoastery(registerRoasteryRequest)
     }
-    
 }
