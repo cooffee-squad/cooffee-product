@@ -7,5 +7,5 @@ data class RegisterCoffeeBeanRequest(
     val isAcidity: Boolean,
     val roastingType: String,
     val tradeType: String,
-    val isSingleOrigin: Boolean
+    val isSingleOrigin: Boolean,
 )

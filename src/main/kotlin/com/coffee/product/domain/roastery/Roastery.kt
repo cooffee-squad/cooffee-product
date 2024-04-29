@@ -29,4 +29,3 @@ class Roastery {
     @JdbcTypeCode(SqlTypes.JSON)
     var careerList: List<String> = listOf()
 }
-

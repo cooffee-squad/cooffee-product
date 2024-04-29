@@ -10,11 +10,12 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/v1/product/coffee-bean")
 class CoffeeBeanController(
-    private val coffeeBeanService: CoffeeBeanService
+    private val coffeeBeanService: CoffeeBeanService,
 ) {
-
     @PostMapping("/register")
-    fun registerCoffeeBean(@RequestBody registerCoffeeBeanRequest: RegisterCoffeeBeanRequest) {
+    fun registerCoffeeBean(
+        @RequestBody registerCoffeeBeanRequest: RegisterCoffeeBeanRequest,
+    ) {
         coffeeBeanService.registerCoffeeBean(registerCoffeeBeanRequest)
     }
 }

@@ -5,8 +5,6 @@ import org.springframework.stereotype.Service
 
 @Service
 class CoffeeBeanServiceImpl : CoffeeBeanService {
-
     override fun registerCoffeeBean(registerCoffeeBeanRequest: RegisterCoffeeBeanRequest) {
-
     }
 }
