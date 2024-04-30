@@ -1,7 +1,7 @@
 package com.coffee.product.service.roastery
 
 import com.coffee.product.model.roastery.RegisterRoasteryRequest
-import com.coffee.product.repository.RoasteryRepository
+import com.coffee.product.repository.roastery.RoasteryRepository
 import org.springframework.stereotype.Service
 
 @Service
