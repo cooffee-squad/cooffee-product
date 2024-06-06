@@ -22,8 +22,9 @@ class CoffeeBeanController(
     }
 
     @GetMapping("/list/{roasteryId}}")
-    fun getCoffeeBeanList(@PathVariable roasteryId: String) {
+    fun getCoffeeBeanList(
+        @PathVariable roasteryId: String,
+    ) {
         coffeeBeanService.getCoffeeBeanList(roasteryId)
-
     }
 }
